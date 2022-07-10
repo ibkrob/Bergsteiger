@@ -9,11 +9,11 @@
             breakpointPos: '33.333%',
             createMap: function () {
                 // create a map in the "map" div, set the view to a given place and zoom
-                var map = L.map('map').setView([48.137222, 11.575556], 11);
+                var map = L.map('map').setView([45.4518, 7.6025], 7);
 
                 // add an OpenStreetMap tile layer
                 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                    attribution: 'Sussbauer/Wagner <a href="https://webmapscience.github.io">WebmapScience</a>, &copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
+                    attribution: 'Made by <a href="https://sussbauer.carrd.co">R.Sussbauer</a>, &copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
                 }).addTo(map);
 
                 return map;
