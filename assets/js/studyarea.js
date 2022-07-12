@@ -11,33 +11,52 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //     changeMap: changeMapFunction })
 // .addTo(mymap);
 
-L.marker([44.1736000,5.2787900]).addTo(map)
-    .bindPopup('Mont Ventoux im Jahr 1336')
-    .openPopup();
 
- L.marker([44.841793,5.552223]).addTo(map)
+var LeafIcon = L.Icon.extend({
+    options: {
+        shadowUrl: '/icons/start.png',
+        iconSize:     [38, 38],
+        // shadowSize:   [50, 50],
+        iconAnchor:   [22, 94],
+        // shadowAnchor: [4, 62],
+        popupAnchor:  [-3, -76]
+    }
+});
+
+var startIcon = new LeafIcon({iconUrl: '/icons/number_1.png'});
+
+var secondIcon = new LeafIcon({iconUrl: '/icons/number_2.png'});
+var thirdIcon = new LeafIcon({iconUrl: '/icons/number_3.png'});
+
+var fourthIcon = new LeafIcon({iconUrl: '/icons/number_4.png'});
+var fifthIcon = new LeafIcon({iconUrl: '/icons/number_5.png'});
+
+var sixtIcon = new LeafIcon({iconUrl: '/icons/number_6.png'});
+var sevendIcon = new LeafIcon({iconUrl: '/icons/number_7.png'});
+
+L.marker([44.1736000,5.2787900],  {icon: startIcon})
+    .bindPopup('Mont Ventoux im Jahr 1336').addTo(map)
+
+ 
+
+ L.marker([44.841793,5.552223], {icon: secondIcon})
     .bindPopup('Erstbesteigung des Mont Aiguille im Jahr 1492')
-    .openPopup();
+    .addTo(map)
 
-L.marker([45.89345978,7.25323710]).addTo(map)
-    .bindPopup('Im Jahr 1779: Murith bestieg den Mont Vélan (3731 m ü NN.)')
-    .openPopup();
+L.marker([45.89345978,7.25323710],  {icon: thirdIcon})
+    .bindPopup('Im Jahr 1779: Murith bestieg den Mont Vélan (3731 m ü NN.)').addTo(map)
     
-L.marker([45.83089911 ,  6.86511039,]).addTo(map)
-    .bindPopup('Erstbesteigung des Mont Blanc')
-    .openPopup();
+L.marker([45.83089911 ,  6.86511039,], {icon: fourthIcon})
+    .bindPopup('Erstbesteigung des Mont Blanc').addTo(map)
 
-L.marker([46.5367, 7.9626]).addTo(map)
-    .bindPopup('1811: Erstbesteigung der Jungfrau (4158 m. ü. NN.)    ')
-    .openPopup();
+L.marker([46.5367, 7.9626], {icon: fifthIcon})
+    .bindPopup('1811: Erstbesteigung der Jungfrau (4158 m. ü. NN.)    ').addTo(map)
 
-L.marker([46.5899, 8.1182,]).addTo(map)
-    .bindPopup('Die Goldenen Jahre des Alpinismus    ')
-    .openPopup();
+L.marker([46.5899, 8.1182,], {icon: sixtIcon})
+    .bindPopup('Die Goldenen Jahre des Alpinismus    ').addTo(map)
 
-L.marker([45.004722, 6.308611,]).addTo(map)
-    .bindPopup('Die Silbernen Jahre des Alpinismus    ')
-    .openPopup();
+L.marker([45.004722, 6.308611,], {icon: sevendIcon})
+    .bindPopup('Die Silbernen Jahre des Alpinismus    ').addTo(map)
 
 
 // Maßstab hinzu
