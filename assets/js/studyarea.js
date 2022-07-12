@@ -14,7 +14,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 var LeafIcon = L.Icon.extend({
     options: {
-        shadowUrl: '/icons/start.png',
         iconSize:     [38, 38],
         // shadowSize:   [50, 50],
         iconAnchor:   [22, 94],
